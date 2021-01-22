@@ -1,0 +1,21 @@
+{
+	"name": "project-pokedex",
+	"version": "1.0.0",
+	"main": "index.js",
+	"author": "Miguel Rios <miguelriosoliveira@gmail.com>",
+	"license": "MIT",
+	"private": true,
+	"workspaces": {
+		"packages": [
+			"packages/*",
+			"packages/shared/*"
+		]
+	},
+	"scripts": {
+		"backend": "cd packages/backend && yarn dev",
+		"frontend": "cd packages/frontend && yarn start"
+	},
+	"dependencies": {
+		"@project-pokedex/eslint-config": "*"
+	}
+}

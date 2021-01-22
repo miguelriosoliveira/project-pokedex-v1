@@ -1,0 +1,55 @@
+{
+	"name": "@project-pokedex/frontend",
+	"version": "1.0.0",
+	"private": true,
+	"browserslist": {
+		"production": [
+			">0.2%",
+			"not dead",
+			"not op_mini all"
+		],
+		"development": [
+			"last 1 chrome version",
+			"last 1 firefox version",
+			"last 1 safari version"
+		]
+	},
+	"scripts": {
+		"watch-css": "less-watch-compiler",
+		"scripts-react": "react-scripts",
+		"start": "npm-run-all -p watch-css \"scripts-react start\"",
+		"build": "npm-run-all -p \"watch-css --run-once\" \"scripts-react build\"",
+		"test": "react-scripts test",
+		"eject": "react-scripts eject"
+	},
+	"lint-staged": {
+		"src/**/*.(jsx?|json|less)": [
+			"prettier --write"
+		],
+		"src/**/*.(jsx?|json)": [
+			"eslint --fix"
+		]
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "lint-staged"
+		}
+	},
+	"dependencies": {
+		"@material-ui/core": "^4.9.3",
+		"@material-ui/icons": "^4.9.1",
+		"axios": "^0.21.1",
+		"react": "^16.9.0",
+		"react-dom": "^16.9.0",
+		"react-router-dom": "^5.0.1",
+		"react-scripts": "3.1.0"
+	},
+	"devDependencies": {
+		"classnames": "^2.2.6",
+		"eslint": "^7.18.0",
+		"husky": "^4.2.3",
+		"less-watch-compiler": "^1.14.6",
+		"lint-staged": "^10.1.1",
+		"npm-run-all": "^4.1.5"
+	}
+}
