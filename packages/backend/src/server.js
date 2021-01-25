@@ -15,7 +15,10 @@ mongoose.connect(MONGO_URL, {
 });
 
 const server = express();
+
 server.use(cors({ exposedHeaders: Utils.totalItemsHeader }));
 server.use(routes);
 server.use(errors());
+server.get('/', (request, response) => response.send('Hello world!'));
+
 server.listen(PORT, () => console.log(`🚀 Backend online in port ${PORT} 🚀`));
