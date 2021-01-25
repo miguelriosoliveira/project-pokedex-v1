@@ -7,15 +7,23 @@
 	"private": true,
 	"workspaces": {
 		"packages": [
-			"packages/*",
-			"packages/shared/*"
+			"packages/*"
 		]
 	},
 	"scripts": {
 		"backend": "cd packages/backend && yarn dev",
-		"frontend": "cd packages/frontend && yarn start"
+		"frontend": "cd packages/frontend && yarn start",
+		"frontend:build": "cd packages/frontend && yarn build"
 	},
-	"dependencies": {
-		"@project-pokedex/eslint-config": "*"
+	"devDependencies": {
+		"eslint-config-airbnb": "^18.2.1",
+		"eslint-config-prettier": "^7.2.0",
+		"eslint-plugin-import": "^2.22.1",
+		"eslint-plugin-import-helpers": "^1.1.0",
+		"eslint-plugin-jsx-a11y": "^6.4.1",
+		"eslint-plugin-prettier": "^3.3.1",
+		"eslint-plugin-react": "^7.22.0",
+		"eslint-plugin-react-hooks": "^4.2.0",
+		"prettier": "^2.2.1"
 	}
 }
