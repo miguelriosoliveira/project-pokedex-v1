@@ -8,13 +8,11 @@ const TypeController = require('./controllers/TypeController');
 const routes = express.Router();
 
 routes.use((request, response, next) => {
-  const { method, url } = request;
-  const requestLog = `[${method}] ${url}`;
-  // eslint-disable-next-line no-console
-  console.time(requestLog);
-  next();
-  // eslint-disable-next-line no-console
-  console.timeEnd(requestLog);
+	const { method, url } = request;
+	const requestLog = `[${method}] ${url}`;
+	console.time(requestLog);
+	next();
+	console.timeEnd(requestLog);
 });
 
 routes.get('/', (request, response) => response.send('Hello Word!'));
