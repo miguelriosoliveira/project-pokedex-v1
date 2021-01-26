@@ -16,7 +16,7 @@ mongoose.connect(MONGO_URL, {
 
 const server = express();
 
-server.use(cors({ exposedHeaders: Utils.totalItemsHeader }));
+server.use(cors({ origin: false, exposedHeaders: Utils.totalItemsHeader }));
 server.use(routes);
 server.use(errors());
 server.get('/', (_request, response) => response.send('Hello world!'));
