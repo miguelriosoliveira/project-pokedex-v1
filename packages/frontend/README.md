@@ -2,3 +2,4 @@
 [![Heroku Status](http://heroku-badge.herokuapp.com/?app=pokedex-frontend-react&style=flat&svg=1)](https://pokedex-frontend-react.herokuapp.com/)
 
 # Pokédex made using ReactJS
+
