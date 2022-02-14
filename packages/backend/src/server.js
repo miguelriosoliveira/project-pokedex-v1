@@ -16,8 +16,10 @@ mongoose.connect(MONGO_URL, {
 
 const server = express();
 
+server.disable('x-powered-by');
+
 server.use(cors({ exposedHeaders: Utils.totalItemsHeader }));
 server.use(routes);
 server.use(errors());
 
-server.listen(PORT, () => console.log(`🚀 Backend online in port ${PORT} 🚀`));
+server.listen(PORT, () => console.log(`🚀 Server online on port ${PORT}`));
