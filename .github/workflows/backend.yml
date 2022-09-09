@@ -8,6 +8,7 @@ on:
       - ".github/workflows/backend.yml"
 jobs:
   deploy:
+    name: Deploy to Fly.io (Backend)
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
