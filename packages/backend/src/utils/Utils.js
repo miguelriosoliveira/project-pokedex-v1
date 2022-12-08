@@ -6,6 +6,8 @@ const generations = {
 	g5: 'generation-v',
 	g6: 'generation-vi',
 	g7: 'generation-vii',
+	g8: 'generation-viii',
+	g9: 'generation-ix',
 };
 
 module.exports = {
@@ -21,6 +23,8 @@ module.exports = {
 		[generations.g5]: { roman: 'Generation V', arabic: 'Generation 5' },
 		[generations.g6]: { roman: 'Generation VI', arabic: 'Generation 6' },
 		[generations.g7]: { roman: 'Generation VII', arabic: 'Generation 7' },
+		[generations.g8]: { roman: 'Generation VIII', arabic: 'Generation 8' },
+		[generations.g9]: { roman: 'Generation IX', arabic: 'Generation 9' },
 	},
 
 	startersByGeneration: {
@@ -31,6 +35,8 @@ module.exports = {
 		[generations.g5]: [495, 498, 501],
 		[generations.g6]: [650, 653, 656],
 		[generations.g7]: [722, 725, 728],
+		[generations.g8]: [810, 813, 816],
+		[generations.g9]: [906, 909, 912],
 	},
 
 	getIdFromUrl(url) {
